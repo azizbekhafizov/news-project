@@ -20,7 +20,7 @@ export default function Product() {
         {products.map((product) => (
          <div className="product" key={product.id}>
          <img src={product.image} alt={product.title} />
-         <h2>{product.description}</h2>
+         <h2>{product.description.slice(0, 100)}...</h2>
        </div>
         ))}
       </div>
