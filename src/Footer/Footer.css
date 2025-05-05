@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px;
+  }
+  
+  .page,
+  .arrow {
+    font-size: 18px;
+    color: #444;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .page.active {
+    background-color: #0b98f2;
+    color: white;
+    border-radius: 6px;
+  }
+  
+  .arrow.disabled {
+    color: #ddd;
+    cursor: default;
+  }
+  
+  .arrow.right {
+    color: #f26b36;
+  }
+  
+  .page:hover,
+  .arrow:hover:not(.disabled) {
+    transform: scale(1.1);
+  }
