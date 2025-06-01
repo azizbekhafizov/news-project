@@ -7,8 +7,8 @@ export default function Product() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products')
-      .then(res => setProducts(res.data))
+    axios.get('https://dummyjson.com/products')
+      .then(res => setProducts(res.data.products))
       .catch(err => console.error(err));
   }, []);
 
@@ -28,7 +28,7 @@ export default function Product() {
       <div className="product__wrapper">
         {filteredProducts.map((product) => (
           <div className="product" key={product.id}>
-            <img src={product.image} alt={product.title} />
+            <img src={product.images[0]} alt={product.title} /> {/* TO‘G‘RILANDI */}
             <h3>{product.title.slice(0, 11)}</h3>
             <p>{product.description.slice(0, 68)}...</p>
           </div>
